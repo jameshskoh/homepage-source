@@ -1,15 +1,21 @@
 {
-  "name": "vue-project",
-  "version": "0.0.0",
+  "name": "homepage-prototype",
+  "description": "The source for my GitHub Pages, based on Vue JS.",
+  "version": "1.0.0",
+  "main": "assets/sass/mystyles.scss",
   "scripts": {
     "dev": "vite",
     "build": "run-p type-check build-only",
+    "css-build": "node-sass --omit-source-map-url src/assets/sass/mystyles.scss src/assets/css/mystyles.css",
+    "css-watch": "npm run css-build -- --watch",
     "preview": "vite preview --port 4173",
+    "start": "npm run css-watch",
     "test:unit": "vitest --environment jsdom",
     "build-only": "vite build",
     "type-check": "vue-tsc --noEmit -p tsconfig.vitest.json --composite false"
   },
   "dependencies": {
+    "bulma": "^0.9.4",
     "vue": "^3.2.37"
   },
   "devDependencies": {
@@ -18,11 +24,24 @@
     "@vitejs/plugin-vue": "^2.3.3",
     "@vue/test-utils": "^2.0.0",
     "@vue/tsconfig": "^0.1.3",
+    "bulma": "^0.9.4",
     "jsdom": "^20.0.0",
+    "node-sass": "^7.0.1",
     "npm-run-all": "^4.1.5",
+    "sass-loader": "^13.0.2",
     "typescript": "~4.7.4",
     "vite": "^2.9.12",
     "vitest": "^0.15.1",
     "vue-tsc": "^0.38.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jameshskoh/homepage-source.git"
+  },
+  "author": "jameshskoh",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jameshskoh/homepage-source/issues"
+  },
+  "homepage": "https://github.com/jameshskoh/homepage-source#readme"
 }

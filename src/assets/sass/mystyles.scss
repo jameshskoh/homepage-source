@@ -1,0 +1,135 @@
+@charset "utf-8";
+
+/*
+    Fonts
+*/
+$family-serif: "Merriweather", "Noto";
+$family-sans-serif: "Public Sans", "Open Sans";
+$family-monospace: "JetBrains Mono", "Noto Sans Mono";
+$family-primary: $family-serif;
+$family-secondary: "Montserrat";
+$family-code: $family-monospace;
+
+// Title/subtitle Customizations
+$title-family: $family-secondary;
+$subtitle-family: $family-sans-serif;
+
+/*
+    Colors
+*/
+// Globals
+$lighter-beige: hsl(23, 10%, 96%);
+$light-beige: hsl(23, 10%, 87%);
+$beige: hsl(22, 8%, 83%);
+
+// same definition as default
+$white: hsl(0, 0%, 100%);
+$grey: hsl(0, 0%, 48%);
+
+$scheme-main: $white;
+$scheme-main-bis: $light-beige;
+$scheme-main-ter: $beige;
+$scheme-invert: hsl(223, 7%, 9%);
+$scheme-invert-bis: hsl(223, 5%, 15%);
+$scheme-invert-ter: hsl(223, 4%, 22%);
+
+$background: $scheme-invert;
+$link: hsl(205, 90%, 38%);
+$link-hover: $grey;
+
+// For Heroes
+$secondary: $scheme-invert-bis;
+$secondary-invert: $light-beige;
+$secondary-light: $scheme-invert-ter;
+$secondary-dark: $scheme-invert;
+
+$secondary-colors: ("secondary": ($secondary, $secondary-invert, $secondary-light, $secondary-dark));
+
+$custom-colors: $secondary-colors;
+
+// Navbars
+$navbar-background-color: $lighter-beige;
+
+// Footers
+$footer-background-color: $secondary;
+$footer-color: $secondary-invert;
+
+/*
+    Sizing and formatting
+*/
+// Navbar
+.c-navbar-item {
+    padding-left: 1.75rem !important;
+    padding-right: 1.75rem !important;
+}
+
+$navbar-item-img-max-height: 4rem;
+
+// Section Title Horizontal Rule
+.h-rule {
+    overflow: hidden;
+    text-align: center;
+    margin-top: 1em;
+}
+
+.h-rule:before,
+.h-rule:after {
+    background-color: #000;
+    content: "";
+    display: inline-block;
+    height: 1px;
+    position: relative;
+    vertical-align: middle;
+    width: 50%;
+}
+
+.h-rule:before {
+    right: 0.5em;
+    margin-left: -50%;
+}
+
+.h-rule:after {
+    left: 0.5em;
+    margin-right: -50%;
+}
+
+// footer link need to change to normal color
+
+
+// Import a Google Font
+@import url('https://fonts.googleapis.com/css2?family=Merriweather');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans');
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans');
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200');
+
+// Import only what you need from Bulma
+@import "../../../node_modules/bulma/sass/utilities/_all.sass";
+@import "../../../node_modules/bulma/sass/helpers/_all.sass";
+@import "../../../node_modules/bulma/sass/base/_all.sass";
+
+// elements
+@import "../../../node_modules/bulma/sass/elements/button.sass";
+@import "../../../node_modules/bulma/sass/elements/container.sass";
+@import "../../../node_modules/bulma/sass/elements/icon.sass";
+@import "../../../node_modules/bulma/sass/elements/image.sass";
+@import "../../../node_modules/bulma/sass/elements/other.sass";
+@import "../../../node_modules/bulma/sass/elements/title.sass";
+
+// components
+@import "../../../node_modules/bulma/sass/components/breadcrumb.sass";
+@import "../../../node_modules/bulma/sass/components/card.sass";
+@import "../../../node_modules/bulma/sass/components/navbar.sass";
+
+// grid
+@import "../../../node_modules/bulma/sass/grid/columns.sass";
+
+// layout
+@import "../../../node_modules/bulma/sass/layout/footer.sass";
+@import "../../../node_modules/bulma/sass/layout/hero.sass";
+@import "../../../node_modules/bulma/sass/layout/section.sass";
