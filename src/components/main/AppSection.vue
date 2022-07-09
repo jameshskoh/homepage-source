@@ -1,32 +1,27 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import TopicCard from "@/components/main/appsection/TopicCard.vue";
+import type { SectionData } from "@/Objects.vue";
+
+// #QUEUE just a wrapper, due to limitation of imported interface
+export interface AppSectionData {
+  sectionData: SectionData;
+}
+
+const props = defineProps<AppSectionData>();
+</script>
 
 <template>
-  <section class="container is-max-desktop block">
-    <div class="container py-4">
-      <h1 class="title is-3 has-text-centered h-rule">My Recent Projects</h1>
+  <section class="container is-max-desktop block pb-5">
+    <div class="container pb-5">
+      <h1 class="title is-3 has-text-centered h-rule">
+        {{ sectionData.sectionName }}
+      </h1>
     </div>
     <div class="columns">
-      <div class="column is-4">
-        <div class="card">
-          <div class="card-image">
-            <figure class="image is-4by3">
-              <img
-                src="https://bulma.io/images/placeholders/1280x960.png"
-                alt="Placeholder image"
-              />
-            </figure>
-          </div>
-          <div class="card-content">
-            <div class="content">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
-              nec iaculis mauris. <a>@bulmaio</a>. <a href="#">#css</a>
-              <a href="#">#responsive</a>
-              <br />
-              <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
-            </div>
-          </div>
-        </div>
-      </div>
+      <TopicCard
+        v-for="componentData in sectionData.componentDatas"
+        v-bind="{ cardData: componentData }"
+      ></TopicCard>
     </div>
   </section>
 </template>

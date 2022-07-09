@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import { inject } from "vue";
+import { linkDataKey } from "@/Objects.vue";
+import NavBarLink from "./navbar/NavBarLink.vue";
 
-import Objects from "@/Objects.vue";
-
-const localLinks = inject(Objects.linkDataKey);
+const localLinks = inject(linkDataKey);
 </script>
 
 <template>
@@ -32,14 +32,11 @@ const localLinks = inject(Objects.linkDataKey);
         <!-- requires JavaScript toggle control! -->
         <div class="navbar-menu is-active">
           <div class="navbar-start">
-            <a v-for="localLink in localLinks" :key="localLink.id"></a>
-            <a href="about.html" class="navbar-item c-navbar-item is-active">
-              About
-            </a>
-            <a href="projects.html" class="navbar-item c-navbar-item">
-              Projects
-            </a>
-            <a href="blogs.html" class="navbar-item c-navbar-item"> Blogs </a>
+            <NavBarLink
+              v-for="localLink in localLinks"
+              v-bind="{ linkData: localLink, active: false }"
+              :key="localLink.lid"
+            ></NavBarLink>
           </div>
           <div class="navbar-end">
             <div class="navbar-item has-dropdown is-hoverable">

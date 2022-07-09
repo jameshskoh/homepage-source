@@ -1,4 +1,10 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { inject } from "vue";
+import { linkDataKey } from "@/Objects.vue";
+import AppFooterLink from "./appfooter/AppFooterLink.vue";
+
+const localLinks = inject(linkDataKey);
+</script>
 
 <template>
   <footer class="footer">
@@ -7,16 +13,12 @@
         <div class="column is-4">
           <span>&copy; 2022 Koh Hui Soon</span>
         </div>
-        <div class="column is-4">
-          <div>
-            <a href="about.html"><p>About</p></a>
-          </div>
-          <div>
-            <a href="projects.html"><p>Projects</p></a>
-          </div>
-          <div>
-            <a href="blogs.html"><p>Blogs</p></a>
-          </div>
+        <div class="column is-4 is-family-sans-serif">
+          <AppFooterLink
+            v-for="localLink in localLinks"
+            v-bind="{ linkData: localLink }"
+            :key="localLink.lid"
+          ></AppFooterLink>
         </div>
         <div class="column is-4">
           <a href="https://bulma.io">
