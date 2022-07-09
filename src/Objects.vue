@@ -27,22 +27,20 @@ export const linkDataKey = Symbol() as InjectionKey<Array<LinkData>>;
 export const linkDatas: Array<LinkData> = [
   {
     lid: 0,
-    name: "About",
-    path: "/about.html",
+    name: "Home",
+    path: "/",
   },
   {
     lid: 1,
     name: "Projects",
-    path: "/projects.html",
+    path: "/projects",
   },
   {
     lid: 2,
     name: "Blogs",
-    path: "/blogs.html",
+    path: "/blogs",
   },
 ];
-
-export const projectSectionDataKey = Symbol() as InjectionKey<SectionData>;
 
 export const projectSectionDatas: SectionData = {
   sectionName: "My Recent Projects",
@@ -61,9 +59,6 @@ export const projectSectionDatas: SectionData = {
     },
   ]
 }
-
-
-export const blogSectionDataKey = Symbol() as InjectionKey<SectionData>;
 
 export const blogSectionDatas: SectionData = {
   sectionName: "My Recent Posts",

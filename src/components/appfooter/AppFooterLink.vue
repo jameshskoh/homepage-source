@@ -10,10 +10,10 @@ const props = defineProps<FooterLinkStat>();
 
 <template>
   <div class="pb-4">
-    <a :href="linkData.path">
+    <router-link :key="linkData.lid" :to="linkData.path">
       <p>
         {{ linkData.name }}
       </p>
-    </a>
+    </router-link>
   </div>
 </template>

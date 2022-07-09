@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { inject } from "vue";
 import { linkDataKey } from "@/Objects.vue";
-import NavBarLink from "./navbar/NavBarLink.vue";
 
 const localLinks = inject(linkDataKey);
 </script>
@@ -11,13 +10,13 @@ const localLinks = inject(linkDataKey);
     <nav class="navbar is-family-sans-serif">
       <div class="container is-max-desktop">
         <div class="navbar-brand">
-          <a href="index.html" class="navbar-item">
+          <router-link to="/" class="navbar-item">
             <div>
               <figure class="image is-48x48 is-1by1">
                 <img class="is-rounded" src="@/assets/images/Profile.jpg" />
               </figure>
             </div>
-          </a>
+          </router-link>
           <a
             role="button"
             class="navbar-burger"
@@ -32,11 +31,13 @@ const localLinks = inject(linkDataKey);
         <!-- requires JavaScript toggle control! -->
         <div class="navbar-menu is-active">
           <div class="navbar-start">
-            <NavBarLink
+            <router-link
               v-for="localLink in localLinks"
-              v-bind="{ linkData: localLink, active: false }"
               :key="localLink.lid"
-            ></NavBarLink>
+              :to="localLink.path"
+              class="navbar-item c-navbar-item"
+              >{{ localLink.name }}</router-link
+            >
           </div>
           <div class="navbar-end">
             <div class="navbar-item has-dropdown is-hoverable">
