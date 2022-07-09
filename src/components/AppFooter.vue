@@ -9,13 +9,13 @@
         </div>
         <div class="column is-4">
           <div>
-            <p class="bd-footer-link"><a href="about.html">About</a></p>
+            <a href="about.html"><p>About</p></a>
           </div>
           <div>
-            <p class="bd-footer-link"><a href="projects.html">Projects</a></p>
+            <a href="projects.html"><p>Projects</p></a>
           </div>
           <div>
-            <p class="bd-footer-link"><a href="blogs.html">Blogs</a></p>
+            <a href="blogs.html"><p>Blogs</p></a>
           </div>
         </div>
         <div class="column is-4">

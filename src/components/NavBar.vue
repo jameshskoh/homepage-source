@@ -1,4 +1,10 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { inject } from "vue";
+
+import Objects from "@/Objects.vue";
+
+const localLinks = inject(Objects.linkDataKey);
+</script>
 
 <template>
   <header>
@@ -26,6 +32,7 @@
         <!-- requires JavaScript toggle control! -->
         <div class="navbar-menu is-active">
           <div class="navbar-start">
+            <a v-for="localLink in localLinks" :key="localLink.id"></a>
             <a href="about.html" class="navbar-item c-navbar-item is-active">
               About
             </a>
