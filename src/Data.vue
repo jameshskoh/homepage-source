@@ -49,7 +49,7 @@ export const projectSectionDatas: SectionData = {
   componentDatas: [
     {
       headerTitle: "JS Mini-games",
-      imagePath: "/src/assets/images/js.png",
+      imagePath: "/images/js.png",
       imageAlt: "JavaScript Logo",
       content:
         "This is the first time I am getting serious at learning JavaScript.",
@@ -57,7 +57,7 @@ export const projectSectionDatas: SectionData = {
     },
     {
       headerTitle: "LeetCode Solutions",
-      imagePath: "/src/assets/images/leetcode.png",
+      imagePath: "/images/leetcode.png",
       imageAlt: "LeetCode Logo",
       content:
         'I kept notes on how I approach LeetCode problem. And then I thought, "Why not share it too?" So here it is.',
@@ -71,7 +71,7 @@ export const blogSectionDatas: SectionData = {
   componentDatas: [
     {
       headerTitle: "A Debut",
-      imagePath: "/src/assets/images/facing-a-desktop-with-code.jpg",
+      imagePath: "/images/facing-a-desktop-with-code.jpg",
       imageAlt: "Person in white shirt using computer, credit to cottonbro.",
       content: "Why create a blog?",
       date: new Date("2022-01-01"),
