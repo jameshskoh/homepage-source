@@ -15,6 +15,7 @@ export interface CardData {
   headerTitle: string;
   headerIcon?: string;
   imagePath: string;
+  imageAlt?: string;
   content: string;
   date: Date;
 }
@@ -48,16 +49,19 @@ export const projectSectionDatas: SectionData = {
   componentDatas: [
     {
       headerTitle: "JS Mini-games",
-      imagePath: "https://bulma.io/images/placeholders/1280x960.png",
+      imagePath: "/src/assets/images/js.png",
+      imageAlt: "JavaScript Logo",
       content:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.",
-      date: new Date("2022-01-01"),
+        "This is the first time I am getting serious at learning JavaScript.",
+      date: new Date("2022-07-01"),
     },
     {
       headerTitle: "LeetCode Solutions",
-      imagePath: "https://bulma.io/images/placeholders/1280x960.png",
-      content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      date: new Date("2022-01-01"),
+      imagePath: "/src/assets/images/leetcode.png",
+      imageAlt: "LeetCode Logo",
+      content:
+        'I kept notes on how I approach LeetCode problem. And then I thought, "Why not share it too?" So here it is.',
+      date: new Date("2022-07-01"),
     },
   ],
 };
@@ -66,9 +70,10 @@ export const blogSectionDatas: SectionData = {
   sectionName: "My Recent Posts",
   componentDatas: [
     {
-      headerTitle: "About Me",
-      imagePath: "https://bulma.io/images/placeholders/1280x960.png",
-      content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      headerTitle: "A Debut",
+      imagePath: "/src/assets/images/facing-a-desktop-with-code.jpg",
+      imageAlt: "Person in white shirt using computer, credit to cottonbro.",
+      content: "Why create a blog?",
       date: new Date("2022-01-01"),
     },
   ],

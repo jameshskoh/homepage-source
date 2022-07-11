@@ -17,7 +17,7 @@ const props = defineProps<AppSectionData>();
         {{ sectionData.sectionName }}
       </h1>
     </div>
-    <div class="columns">
+    <div class="columns px-4">
       <TopicCard
         v-for="componentData in sectionData.componentDatas"
         v-bind="{ cardData: componentData }"

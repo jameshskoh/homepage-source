@@ -10,26 +10,23 @@ const props = defineProps<AppCardData>();
 </script>
 
 <template>
-  <!-- #TODO improve title styling -->
   <!-- #TODO handle optional fields -->
-  <!-- #TODO set size limit, add ellipsis to overflowing content -->
-  <div class="column is-3">
+  <div class="column is-4">
     <div class="card">
       <div class="card-image">
-        <figure class="image is-4by3">
-          <img :src="cardData.imagePath" alt="Placeholder image" />
+        <figure class="image">
+          <img :src="cardData.imagePath" :alt="cardData.imageAlt" />
         </figure>
       </div>
-      <div class="card-header">
-        <h1 class="title is-5">{{ cardData.headerTitle }}</h1>
-      </div>
-      <div class="card-content">
+      <div class="card-content fixed-height">
+        <div class="header py-2">
+          <h1 class="title is-4">{{ cardData.headerTitle }}</h1>
+          <time :datetime="cardData.date.toISOString().split('T')[0]">{{
+            cardData.date.toDateString().split("T")[0]
+          }}</time>
+        </div>
         <div class="content">
           {{ cardData.content }}
-          <br />
-          <time :datetime="cardData.date.toISOString().split('T')[0]">{{
-            cardData.date.toISOString().split("T")[0]
-          }}</time>
         </div>
       </div>
     </div>

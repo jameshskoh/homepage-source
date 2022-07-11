@@ -99,7 +99,23 @@ $navbar-item-img-max-height: 4rem;
     margin-right: -50%;
 }
 
-// footer link need to change to normal color
+// Card
+.card-image .image img {
+    height: 250px !important;
+    object-fit: cover;
+    object-position: 50% 50%;
+}
+
+.card-content.fixed-height {
+    height: 240px;
+}
+
+.card-content .content {
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
 
 
 // Import a Google Font

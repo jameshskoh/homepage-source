@@ -9,8 +9,8 @@
           <h2 class="subtitle is-3">Write Code. Create Change.</h2>
           <div class="content">
             <p class="is-4">
-              Hobbyist coder since 2010. Professional software engineer since
-              2020.
+              Hobbyist coder since 2011. Professional software engineer since
+              2021.
             </p>
           </div>
         </div>
