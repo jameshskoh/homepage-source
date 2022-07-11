@@ -7,12 +7,18 @@ $family-serif: "Merriweather", "Noto";
 $family-sans-serif: "Public Sans", "Open Sans";
 $family-monospace: "JetBrains Mono", "Noto Sans Mono";
 $family-primary: $family-serif;
-$family-secondary: "Montserrat";
+$family-secondary: "EB Garamond";
 $family-code: $family-monospace;
 
 // Title/subtitle Customizations
 $title-family: $family-secondary;
-$subtitle-family: $family-sans-serif;
+$subtitle-family: $family-secondary;
+
+// Custom stylized title
+.title.stylized {
+    font-family: "Bodoni Moda";
+    font-weight: 400;
+}
 
 /*
     Colors
@@ -106,7 +112,8 @@ $navbar-item-img-max-height: 4rem;
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono');
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200');
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz@6..96');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond');
 
 // Import only what you need from Bulma
 @import "../../../node_modules/bulma/sass/utilities/_all.sass";

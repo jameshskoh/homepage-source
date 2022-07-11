@@ -1,12 +1,6 @@
 <script setup lang="ts">
-import { provide } from "vue";
-
-import { linkDatas, linkDataKey } from "@/Objects.vue";
-
-import NavBar from "@/components/NavBar.vue";
-import AppFooter from "@/components/AppFooter.vue";
-
-provide(linkDataKey, linkDatas);
+import NavBar from "@/components/common/NavBar.vue";
+import AppFooter from "@/components/common/AppFooter.vue";
 </script>
 
 <template>

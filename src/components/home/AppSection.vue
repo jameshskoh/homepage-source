@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import TopicCard from "@/components/main/appsection/TopicCard.vue";
-import type { SectionData } from "@/Objects.vue";
+import TopicCard from "@/components/home/appsection/TopicCard.vue";
+import type { SectionData } from "@/Data.vue";
 
 // #QUEUE just a wrapper, due to limitation of imported interface
 export interface AppSectionData {

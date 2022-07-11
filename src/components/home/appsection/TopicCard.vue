@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { CardData } from "@/Objects.vue";
+import type { CardData } from "@/Data.vue";
 
 // #QUEUE just a wrapper, due to limitation of imported interface
 export interface AppCardData {

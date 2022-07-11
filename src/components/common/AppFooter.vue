@@ -1,9 +1,6 @@
 <script setup lang="ts">
-import { inject } from "vue";
-import { linkDataKey } from "@/Objects.vue";
-import AppFooterLink from "./appfooter/AppFooterLink.vue";
-
-const localLinks = inject(linkDataKey);
+import { mainLinks } from "@/Data.vue";
+import AppFooterLink from "@/components/appfooter/AppFooterLink.vue";
 </script>
 
 <template>
@@ -15,9 +12,9 @@ const localLinks = inject(linkDataKey);
         </div>
         <div class="column is-4 is-family-sans-serif">
           <AppFooterLink
-            v-for="localLink in localLinks"
-            v-bind="{ linkData: localLink }"
-            :key="localLink.lid"
+            v-for="mainLink in mainLinks"
+            v-bind="{ mainLink: mainLink }"
+            :key="mainLink.lid"
           ></AppFooterLink>
         </div>
         <div class="column is-4">

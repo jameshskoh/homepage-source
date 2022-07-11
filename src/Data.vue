@@ -1,6 +1,4 @@
 <script type="module" lang="ts">
-import type { InjectionKey } from "vue";
-
 export interface LinkData {
   lid: number;
   name: string;
@@ -21,10 +19,8 @@ export interface CardData {
   date: Date;
 }
 
-export const linkDataKey = Symbol() as InjectionKey<Array<LinkData>>;
-
 // #QUEUE accommodate data structure for dropdown lists
-export const linkDatas: Array<LinkData> = [
+export const mainLinks: Array<LinkData> = [
   {
     lid: 0,
     name: "Home",
@@ -32,11 +28,16 @@ export const linkDatas: Array<LinkData> = [
   },
   {
     lid: 1,
+    name: "About",
+    path: "/about",
+  },
+  {
+    lid: 2,
     name: "Projects",
     path: "/projects",
   },
   {
-    lid: 2,
+    lid: 3,
     name: "Blogs",
     path: "/blogs",
   },
@@ -48,17 +49,18 @@ export const projectSectionDatas: SectionData = {
     {
       headerTitle: "JS Mini-games",
       imagePath: "https://bulma.io/images/placeholders/1280x960.png",
-      content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.",
-      date: new Date("2022-01-01")
+      content:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.",
+      date: new Date("2022-01-01"),
     },
     {
       headerTitle: "LeetCode Solutions",
       imagePath: "https://bulma.io/images/placeholders/1280x960.png",
       content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      date: new Date("2022-01-01")
+      date: new Date("2022-01-01"),
     },
-  ]
-}
+  ],
+};
 
 export const blogSectionDatas: SectionData = {
   sectionName: "My Recent Posts",
@@ -67,8 +69,8 @@ export const blogSectionDatas: SectionData = {
       headerTitle: "About Me",
       imagePath: "https://bulma.io/images/placeholders/1280x960.png",
       content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      date: new Date("2022-01-01")
+      date: new Date("2022-01-01"),
     },
-  ]
-}
+  ],
+};
 </script>

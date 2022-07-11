@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import type { LinkData } from "@/Objects.vue";
+import type { LinkData } from "@/Data.vue";
 
 export interface FooterLinkStat {
-  linkData: LinkData;
+  mainLink: LinkData;
 }
 
 const props = defineProps<FooterLinkStat>();
@@ -10,9 +10,9 @@ const props = defineProps<FooterLinkStat>();
 
 <template>
   <div class="pb-4">
-    <router-link :key="linkData.lid" :to="linkData.path">
+    <router-link :key="mainLink.lid" :to="mainLink.path">
       <p>
-        {{ linkData.name }}
+        {{ mainLink.name }}
       </p>
     </router-link>
   </div>

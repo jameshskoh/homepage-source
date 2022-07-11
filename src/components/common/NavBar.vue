@@ -1,8 +1,5 @@
 <script setup lang="ts">
-import { inject } from "vue";
-import { linkDataKey } from "@/Objects.vue";
-
-const localLinks = inject(linkDataKey);
+import { mainLinks } from "@/Data.vue";
 </script>
 
 <template>
@@ -30,11 +27,11 @@ const localLinks = inject(linkDataKey);
         <div class="navbar-menu is-active">
           <div class="navbar-start">
             <router-link
-              v-for="localLink in localLinks"
-              :key="localLink.lid"
-              :to="localLink.path"
+              v-for="mainLink in mainLinks"
+              :key="mainLink.lid"
+              :to="mainLink.path"
               class="navbar-item c-navbar-item"
-              >{{ localLink.name }}</router-link
+              >{{ mainLink.name }}</router-link
             >
           </div>
           <div class="navbar-end">
