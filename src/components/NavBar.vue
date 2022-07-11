@@ -9,14 +9,12 @@ const localLinks = inject(linkDataKey);
   <header>
     <nav class="navbar is-family-sans-serif">
       <div class="container is-max-desktop">
-        <div class="navbar-brand">
-          <router-link to="/" class="navbar-item">
-            <div>
-              <figure class="image is-48x48 is-1by1">
-                <img class="is-rounded" src="@/assets/images/Profile.jpg" />
-              </figure>
-            </div>
-          </router-link>
+        <div class="navbar-brand p-2">
+          <div>
+            <figure class="image is-48x48 is-1by1">
+              <img class="is-rounded" src="@/assets/images/Profile.jpg" />
+            </figure>
+          </div>
           <a
             role="button"
             class="navbar-burger"
