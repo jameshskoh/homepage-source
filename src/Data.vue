@@ -5,25 +5,28 @@ export interface LinkData {
   path: string;
 }
 
-export interface SectionData {
-  sectionName: string;
-  componentDatas: Array<CardData>;
-}
-
 // #TODO think of card footer support
-export interface CardData {
+export interface ContentAbstract {
+  id: number;
   headerTitle: string;
   headerIcon?: string;
   imagePath: string;
   imageAlt?: string;
-  content: string;
+  description: string;
   date: Date;
 }
 
 export interface ProjectData {
-  id: number;
-  title: string;
-  description: string;
+  abstract: ContentAbstract;
+  content: Array<string>;
+  externalLink: string;
+  select?: boolean;
+}
+
+export interface BlogData {
+  abstract: ContentAbstract;
+  content: Array<string>;
+  select: boolean;
 }
 
 // #QUEUE accommodate data structure for dropdown lists
@@ -50,51 +53,54 @@ export const mainLinks: Array<LinkData> = [
   },
 ];
 
-export const projectSectionDatas: SectionData = {
-  sectionName: "My Recent Projects",
-  componentDatas: [
-    {
+export const projectDatas: Array<ProjectData> = [
+  {
+    abstract: {
+      id: 0,
       headerTitle: "JS Mini-games",
       imagePath: "js.png",
       imageAlt: "JavaScript Logo",
-      content:
-        "This is the first time I am getting serious to learn JavaScript.",
+      description:
+        "Writing games is the fastest way to make something tangible and fun",
       date: new Date("2022-07-01"),
     },
-    {
+    content: [
+      "Blablabla",
+      "biubiubiu",
+      "boom boom boom",
+      "Lorem ipsum dolor sit amet.",
+    ],
+    externalLink: "",
+    select: true,
+  },
+  {
+    abstract: {
+      id: 1,
       headerTitle: "LeetCode Solutions",
       imagePath: "leetcode.png",
       imageAlt: "LeetCode Logo",
-      content:
-        'I kept notes on how I approach LeetCode problem. And then I thought, "Why not share it too?" So here it is.',
+      description:
+        'I kept notes on how I approach LeetCode problems. And then I thought, "Why not share it too?"',
       date: new Date("2022-07-01"),
     },
-  ],
-};
+    content: [""],
+    externalLink: "",
+    select: true,
+  },
+];
 
-export const blogSectionDatas: SectionData = {
-  sectionName: "My Recent Posts",
-  componentDatas: [
-    {
+export const blogDatas: Array<BlogData> = [
+  {
+    abstract: {
+      id: 0,
       headerTitle: "A Debut",
       imagePath: "facing-a-desktop-with-code.jpg",
-      imageAlt: "Person in white shirt using computer, credit to cottonbro.",
-      content: "Why create a blog?",
+      imageAlt: "Person in a white shirt using computer, credit to cottonbro.",
+      description: "Why I decided to create a blog?",
       date: new Date("2022-01-01"),
     },
-  ],
-};
-
-export const projectDatas: Array<ProjectData> = [
-  {
-    id: 0,
-    title: "JS Mini-games",
-    description: "Multiple classic games that you will want to play!",
-  },
-  {
-    id: 1,
-    title: "Placeholder game",
-    description: "Lorem ipsum dolor sit amet.",
+    content: [""],
+    select: true,
   },
 ];
 </script>

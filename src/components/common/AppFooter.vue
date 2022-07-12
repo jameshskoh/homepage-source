@@ -33,14 +33,14 @@ import AppFooterLink from "@/components/appfooter/AppFooterLink.vue";
               </a>
             </div>
             <div class="column is-2">
-              <a href="https://bulma.io"
+              <a href="https://vuejs.org/"
                 ><figure class="image is-32x32">
                   <img src="@\assets\images\vuejs.png" />
                 </figure>
               </a>
             </div>
             <div class="column is-2">
-              <a href="https://bulma.io"
+              <a href="https://pages.github.com/"
                 ><figure class="image is-32x32">
                   <img src="@\assets\images\GitHub-Mark-Light-64px.png" />
                 </figure>

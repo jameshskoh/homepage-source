@@ -1,37 +1,44 @@
 <script setup lang="ts">
-import type { CardData } from "@/Data.vue";
+import type {
+  BlogData,
+  ContentAbstract,
+  LinkData,
+  ProjectData,
+} from "@/Data.vue";
 
-// #QUEUE just a wrapper, due to limitation of imported interface
-export interface AppCardData {
-  cardData: CardData;
+export interface AppAbstract {
+  abstract: ContentAbstract;
+  section: LinkData;
 }
 
-const props = defineProps<AppCardData>();
+const props = defineProps<AppAbstract>();
 </script>
 
 <template>
   <!-- #TODO handle optional fields -->
   <div class="column is-4">
-    <div class="card">
-      <div class="card-image">
-        <figure class="image">
-          <img
-            :src="`/images/${cardData.imagePath}`"
-            :alt="cardData.imageAlt"
-          />
-        </figure>
-      </div>
-      <div class="card-content fixed-height">
-        <div class="header py-2">
-          <h1 class="title is-4">{{ cardData.headerTitle }}</h1>
-          <time :datetime="cardData.date.toISOString().split('T')[0]">{{
-            cardData.date.toDateString().split("T")[0]
-          }}</time>
+    <router-link :to="`${section.path}/${abstract.id}`">
+      <div class="card">
+        <div class="card-image">
+          <figure class="image">
+            <img
+              :src="`/images/${abstract.imagePath}`"
+              :alt="abstract.imageAlt"
+            />
+          </figure>
         </div>
-        <div class="content">
-          {{ cardData.content }}
+        <div class="card-content fixed-height">
+          <div class="header py-2">
+            <h1 class="title is-4">{{ abstract.headerTitle }}</h1>
+            <time :datetime="abstract.date.toISOString().split('T')[0]">{{
+              abstract.date.toDateString().split("T")[0]
+            }}</time>
+          </div>
+          <div class="content">
+            {{ abstract.description }}
+          </div>
         </div>
       </div>
-    </div>
+    </router-link>
   </div>
 </template>

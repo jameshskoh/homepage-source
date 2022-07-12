@@ -1,5 +1,21 @@
 <script setup lang="ts">
 import { mainLinks } from "@/Data.vue";
+import { computed } from "@vue/reactivity";
+import { ref } from "vue";
+
+const isActive = ref(false);
+
+function toggleNavBarActive() {
+  isActive.value = !isActive.value;
+}
+
+function disableNavBarActive() {
+  isActive.value = false;
+}
+
+const activeNavBar = computed(() => ({
+  "is-active": isActive.value,
+}));
 </script>
 
 <template>
@@ -13,8 +29,10 @@ import { mainLinks } from "@/Data.vue";
             </figure>
           </div>
           <a
+            @click="toggleNavBarActive"
             role="button"
             class="navbar-burger"
+            :class="activeNavBar"
             aria-label="menu"
             aria-expanded="false"
           >
@@ -23,13 +41,13 @@ import { mainLinks } from "@/Data.vue";
             <span aria-hidden="true"></span>
           </a>
         </div>
-        <!-- requires JavaScript toggle control! -->
-        <div class="navbar-menu is-active">
+        <div class="navbar-menu" :class="activeNavBar">
           <div class="navbar-start">
             <router-link
               v-for="mainLink in mainLinks"
               :key="mainLink.lid"
               :to="mainLink.path"
+              @click="disableNavBarActive"
               class="navbar-item c-navbar-item"
               >{{ mainLink.name }}</router-link
             >
