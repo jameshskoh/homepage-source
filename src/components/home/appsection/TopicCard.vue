@@ -15,7 +15,10 @@ const props = defineProps<AppCardData>();
     <div class="card">
       <div class="card-image">
         <figure class="image">
-          <img :src="cardData.imagePath" :alt="cardData.imageAlt" />
+          <img
+            :src="`/images/${cardData.imagePath}`"
+            :alt="cardData.imageAlt"
+          />
         </figure>
       </div>
       <div class="card-content fixed-height">

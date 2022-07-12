@@ -20,6 +20,12 @@ export interface CardData {
   date: Date;
 }
 
+export interface ProjectData {
+  id: number;
+  title: string;
+  description: string;
+}
+
 // #QUEUE accommodate data structure for dropdown lists
 export const mainLinks: Array<LinkData> = [
   {
@@ -49,15 +55,15 @@ export const projectSectionDatas: SectionData = {
   componentDatas: [
     {
       headerTitle: "JS Mini-games",
-      imagePath: "/images/js.png",
+      imagePath: "js.png",
       imageAlt: "JavaScript Logo",
       content:
-        "This is the first time I am getting serious at learning JavaScript.",
+        "This is the first time I am getting serious to learn JavaScript.",
       date: new Date("2022-07-01"),
     },
     {
       headerTitle: "LeetCode Solutions",
-      imagePath: "/images/leetcode.png",
+      imagePath: "leetcode.png",
       imageAlt: "LeetCode Logo",
       content:
         'I kept notes on how I approach LeetCode problem. And then I thought, "Why not share it too?" So here it is.',
@@ -71,11 +77,24 @@ export const blogSectionDatas: SectionData = {
   componentDatas: [
     {
       headerTitle: "A Debut",
-      imagePath: "/images/facing-a-desktop-with-code.jpg",
+      imagePath: "facing-a-desktop-with-code.jpg",
       imageAlt: "Person in white shirt using computer, credit to cottonbro.",
       content: "Why create a blog?",
       date: new Date("2022-01-01"),
     },
   ],
 };
+
+export const projectDatas: Array<ProjectData> = [
+  {
+    id: 0,
+    title: "JS Mini-games",
+    description: "Multiple classic games that you will want to play!",
+  },
+  {
+    id: 1,
+    title: "Placeholder game",
+    description: "Lorem ipsum dolor sit amet.",
+  },
+];
 </script>
