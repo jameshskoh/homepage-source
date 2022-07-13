@@ -5,11 +5,12 @@
 
 ## To-do List
 
-- [ ] Add external link section to each project
+- [x] Add external link section to each project
 - [ ] Upload actual content
 - [ ] Refactor `link.lid` comparison to use enum
 - [ ] Refactor `Data.vue` and use JSON files
 - [ ] Documentation
+- [ ] Create About Page
 
 
 
