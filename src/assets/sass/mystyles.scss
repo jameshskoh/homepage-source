@@ -16,8 +16,9 @@ $subtitle-family: $family-secondary;
 
 // Custom stylized title
 .title.stylized {
-    font-family: "Bodoni Moda";
+    font-family: "Playfair Display";
     font-weight: 400;
+    font-variant: small-caps;
 }
 
 /*
@@ -149,7 +150,9 @@ $navbar-item-img-max-height: 4rem;
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono');
 
-@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz@6..96');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display');
+// @import url('https://fonts.googleapis.com/css2?family=GFS+Didot');
+// @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz@6..96');
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond');
 
 // Import only what you need from Bulma
