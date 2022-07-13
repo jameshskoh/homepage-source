@@ -63,6 +63,15 @@ $footer-color: $secondary-invert;
 /*
     Sizing and formatting
 */
+// Divider div
+.divider {
+    margin: auto;
+    width: 85%;
+    max-width: 820px;
+    border-bottom: 2px solid #bbb;
+    
+}
+
 // Navbar
 .c-navbar-item {
     padding-left: 1.75rem !important;

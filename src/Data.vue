@@ -19,7 +19,7 @@ export interface ContentAbstract {
 export interface ProjectData {
   abstract: ContentAbstract;
   content: Array<string>;
-  externalLink: string;
+  externalLink: Array<LinkData>;
   select?: boolean;
 }
 
@@ -70,7 +70,18 @@ export const projectDatas: Array<ProjectData> = [
       "boom boom boom",
       "Lorem ipsum dolor sit amet.",
     ],
-    externalLink: "",
+    externalLink: [
+      {
+        lid: 0,
+        name: "GitHub Project",
+        path: "https://www.google.com",
+      },
+      {
+        lid: 1,
+        name: "GitHub Project 2",
+        path: "https://www.google.com",
+      },
+    ],
     select: true,
   },
   {
@@ -84,7 +95,18 @@ export const projectDatas: Array<ProjectData> = [
       date: new Date("2022-07-01"),
     },
     content: [""],
-    externalLink: "",
+    externalLink: [
+      {
+        lid: 0,
+        name: "GitHub Project",
+        path: "https://www.google.com",
+      },
+      {
+        lid: 1,
+        name: "GitHub Project 2",
+        path: "https://www.google.com",
+      },
+    ],
     select: true,
   },
 ];

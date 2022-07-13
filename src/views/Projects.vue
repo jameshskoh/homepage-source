@@ -35,17 +35,18 @@ const projectAbstract = projectData.abstract;
           :alt="projectData.abstract.imageAlt"
         />
       </figure>
-      <div class="py-4">
+      <div class="py-4 px-2">
         <h1 class="title is-1">{{ projectAbstract.headerTitle }}</h1>
         <h2 class="subtitle is-3">{{ projectAbstract.description }}</h2>
         <time :datetime="projectAbstract.date.toISOString().split('T')[0]">{{
           projectAbstract.date.toDateString().split("T")[0]
         }}</time>
       </div>
+      <div class="divider"></div>
     </section>
   </div>
   <main class="container is-max-desktop">
-    <div class="px-6">
+    <div class="px-6 py-2">
       <nav class="breadcrumb has-succeeds-separator" aria-label="breadcrumbs">
         <ul>
           <li><router-link :to="homeLink.path">Home</router-link></li>
@@ -60,6 +61,19 @@ const projectAbstract = projectData.abstract;
       <article class="content">
         <p v-for="part in projectData.content">{{ part }}</p>
       </article>
+    </section>
+    <div class="divider"></div>
+    <section class="section">
+      <h2 class="subtitle is-3">External Links:</h2>
+      <div
+        class="pb-4"
+        v-for="link in projectData.externalLink"
+        :key="link.lid"
+      >
+        <a :href="link.path">
+          {{ link.name }}
+        </a>
+      </div>
     </section>
   </main>
 </template>
